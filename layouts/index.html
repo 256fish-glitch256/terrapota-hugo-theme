@@ -1,0 +1,28 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<section class="hero">
+    <h1 class="hero-title">{{ .Site.Title }}</h1>
+    <p class="hero-subtitle">{{ .Site.Params.description }}</p>
+</section>
+
+{{ $posts := where .Site.RegularPages "Type" "posts" }}
+{{ if $posts }}
+<section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <div class="posts-grid">
+        {{ range first 6 $posts }}
+        <article class="post-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date.Format "Jan 2, 2006" }}
+            </time>
+            {{ if .Description }}
+                <p>{{ .Description }}</p>
+            {{ end }}
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}

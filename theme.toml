@@ -1,0 +1,15 @@
+name = "Basic"
+license = "MIT"
+licenselink = "https://github.com/256fish-glitch256/terrapota-hugo-theme/blob/main/LICENSE"
+description = "A clean, minimal Hugo theme for blogs and websites"
+homepage = "https://github.com/256fish-glitch256/terrapota-hugo-theme"
+tags = ["blog", "minimal", "clean", "responsive"]
+features = ["responsive", "dark mode ready"]
+min_version = "0.87.0"
+
+[author]
+name = "256fish-glitch256"
+homepage = "https://github.com/256fish-glitch256"
+
+[params]
+description = "A minimal theme for Hugo"
